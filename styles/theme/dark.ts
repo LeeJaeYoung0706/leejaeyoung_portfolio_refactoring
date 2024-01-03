@@ -1,6 +1,6 @@
 import {DefaultTheme} from "styled-components";
 import {customMediaQuery} from "@/styles/commonStyles";
-import {MuiCancellableEvent} from "@mui/base/utils/MuiCancellableEvent";
+
 /**
  * 검정 계열 테마
  */

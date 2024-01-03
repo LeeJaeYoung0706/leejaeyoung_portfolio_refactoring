@@ -1,10 +1,10 @@
 'use client'
-import {useScrollPosition} from "@/lib/useScrollPosition";
 import HeaderView from "@/atom/organisms/header/HeaderView";
-import Logo from "@/atom/atoms/header/Logo";
-import PcMenu from "@/atom/molecules/header/menu/PcMenu";
-import MobileMenu from "@/atom/molecules/header/menu/MobileMenu";
 import React, {useCallback, useState} from "react";
+import Logo from "@/atom/atom/Logo";
+import {RussoOneFont} from "@/styles/font/fontStyle";
+import {useScrollPosition} from "@/hooks/useScrollPosition";
+import Menu from "@/atom/molecules/header/menu/Menu";
 
 /**
  * Header Container
@@ -25,11 +25,10 @@ export default function Header(): React.JSX.Element {
     <HeaderView isTop={isTop} checked={checked}>
       <Logo
         logoText={'PORTFOLIO'}
-        $logoFontSize={'50px'}
+        logoFont={RussoOneFont.className}
         checked={checked}
       />
-      <PcMenu/>
-      <MobileMenu checked={checked} checkHandler={checkHandler}/>
+      <Menu checked={checked} checkHandler={checkHandler}/>
     </HeaderView>
   )
 }

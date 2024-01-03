@@ -26,7 +26,7 @@ export default function RootLayout({
       <StyledComponentsRegistry>
         <ThemeHandlerProvider>
           <body>
-            {/*<Header />*/}
+            <Header />
             {children}
             <Footer />
           </body>
