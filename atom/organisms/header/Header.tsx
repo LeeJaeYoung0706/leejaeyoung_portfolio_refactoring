@@ -4,7 +4,8 @@ import React, {useCallback, useState} from "react";
 import Logo from "@/atom/atom/Logo";
 import {RussoOneFont} from "@/styles/font/fontStyle";
 import {useScrollPosition} from "@/hooks/useScrollPosition";
-import Menu from "@/atom/molecules/header/menu/Menu";
+import HeaderPcMenu from "@/atom/molecules/header/menu/PcMenu";
+import HeaderMobileMenu from "@/atom/molecules/header/menu/MobileMenu";
 
 /**
  * Header Container
@@ -28,7 +29,8 @@ export default function Header(): React.JSX.Element {
         logoFont={RussoOneFont.className}
         checked={checked}
       />
-      <Menu checked={checked} checkHandler={checkHandler}/>
+      <HeaderPcMenu />
+      <HeaderMobileMenu checked={checked} checkHandler={checkHandler}/>
     </HeaderView>
   )
 }

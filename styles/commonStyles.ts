@@ -49,6 +49,21 @@ export const DisplayFlexContainer = (flexDirection :flexDirectionType, justifyCo
       flex-wrap: ${wrap ? 'wrap' : 'nowrap'};
   `;
 
+/**
+ *  Div 가 아닌 시맨틱 태그용
+ * @param flexDirection
+ * @param justifyContent
+ * @param alignItems
+ * @param display
+ * @param wrap
+ */
+export const DisplayFlex = (flexDirection :flexDirectionType, justifyContent :justifyContentType, alignItems :alignItemsType , display :displayType = 'flex' , wrap?: boolean ) => css`
+      display: ${display};
+      flex-direction: ${flexDirection};
+      justify-content: ${justifyContent};
+      align-items: ${alignItems};
+      flex-wrap: ${wrap ? 'wrap' : 'nowrap'};
+    `
 export const color = {
     black: 'var(--black)',
     white: 'var(--white)'
